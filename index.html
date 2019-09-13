@@ -29,25 +29,43 @@ img.emoji {
 </style>
 	<link rel='stylesheet' id='wp-block-library-css'  href='https://zlash.tk/wp-includes/css/dist/block-library/style.min.css?ver=5.2.3' type='text/css' media='all' />
 <link rel='stylesheet' id='wp-block-library-theme-css'  href='https://zlash.tk/wp-includes/css/dist/block-library/theme.min.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-block-style-css'  href='https://zlash.tk/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=2.3.0' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
 <link rel='stylesheet' id='font-awesome-css'  href='https://zlash.tk/wp-content/themes/oceanwp/assets/css/third/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
 <link rel='stylesheet' id='simple-line-icons-css'  href='https://zlash.tk/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=2.4.0' type='text/css' media='all' />
 <link rel='stylesheet' id='magnific-popup-css'  href='https://zlash.tk/wp-content/themes/oceanwp/assets/css/third/magnific-popup.min.css?ver=1.0.0' type='text/css' media='all' />
 <link rel='stylesheet' id='slick-css'  href='https://zlash.tk/wp-content/themes/oceanwp/assets/css/third/slick.min.css?ver=1.6.0' type='text/css' media='all' />
 <link rel='stylesheet' id='oceanwp-style-css'  href='https://zlash.tk/wp-content/themes/oceanwp/assets/css/style.min.css?ver=1.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-woo-mini-cart-css'  href='https://zlash.tk/wp-content/themes/oceanwp/assets/css/woo/woo-mini-cart.min.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-woocommerce-css'  href='https://zlash.tk/wp-content/themes/oceanwp/assets/css/woo/woocommerce.min.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-woo-star-font-css'  href='https://zlash.tk/wp-content/themes/oceanwp/assets/css/woo/woo-star-font.min.css?ver=5.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-woo-quick-view-css'  href='https://zlash.tk/wp-content/themes/oceanwp/assets/css/woo/woo-quick-view.min.css?ver=5.2.3' type='text/css' media='all' />
 <link rel='stylesheet' id='oe-widgets-style-css'  href='https://zlash.tk/wp-content/plugins/ocean-extra/assets/css/widgets.css?ver=5.2.3' type='text/css' media='all' />
+<script type="text/template" id="tmpl-variation-template">
+	<div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
+	<div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
+	<div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
+</script>
+<script type="text/template" id="tmpl-unavailable-variation-template">
+	<p>Sorry, this product is unavailable. Please choose a different combination.</p>
+</script>
 <script type='text/javascript' src='https://zlash.tk/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
 <script type='text/javascript' src='https://zlash.tk/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <link rel='https://api.w.org/' href='https://zlash.tk/wp-json/' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://zlash.tk/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://zlash.tk/wp-includes/wlwmanifest.xml" /> 
 <meta name="generator" content="WordPress 5.2.3" />
-		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<meta name="generator" content="WooCommerce 3.7.0" />
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+			<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 		<!-- OceanWP CSS -->
 <style type="text/css">
-/* Header CSS */#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}
+/* Header CSS */#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}/* WooCommerce CSS */#owp-checkout-timeline .timeline-step{color:#cccccc}#owp-checkout-timeline .timeline-step{border-color:#cccccc}
 </style></head>
 
-<body class="home blog wp-embed-responsive oceanwp-theme sidebar-mobile default-breakpoint has-sidebar content-right-sidebar has-topbar has-breadcrumbs elementor-default">
+<body class="home blog wp-embed-responsive theme-oceanwp woocommerce-no-js oceanwp-theme sidebar-mobile default-breakpoint has-sidebar content-right-sidebar has-topbar has-breadcrumbs has-grid-list account-original-style elementor-default">
 
 	
 	<div id="outer-wrap" class="site clr">
@@ -274,15 +292,77 @@ img.emoji {
 			</form>
 </div><!-- .mobile-menu-search -->
 
+
+<div id="owp-qv-wrap">
+	<div class="owp-qv-container">
+		<div class="owp-qv-content-wrap">
+			<div class="owp-qv-content-inner">
+				<a href="#" class="owp-qv-close">×</a>
+				<div id="owp-qv-content" class="woocommerce single-product"></div>
+			</div>
+		</div>
+	</div>
+	<div class="owp-qv-overlay"></div>
+</div><div id="oceanwp-cart-sidebar-wrap"><div class="oceanwp-cart-sidebar"><a href="#" class="oceanwp-cart-close">×</a><p class="owp-cart-title">Cart</p><div class="divider"></div><div class="owp-mini-cart"><div class="widget woocommerce widget_shopping_cart"><div class="widget_shopping_cart_content"></div></div></div></div><div class="oceanwp-cart-sidebar-overlay"></div></div>	<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
+	</script>
+			<script type="text/javascript">
+			var wc_product_block_data = JSON.parse( decodeURIComponent( '%7B%22min_columns%22%3A1%2C%22max_columns%22%3A6%2C%22default_columns%22%3A3%2C%22min_rows%22%3A1%2C%22max_rows%22%3A6%2C%22default_rows%22%3A1%2C%22thumbnail_size%22%3A300%2C%22placeholderImgSrc%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fzlash%5C%2Fwp-content%5C%2Fuploads%5C%2Fwoocommerce-placeholder.png%22%2C%22min_height%22%3A500%2C%22default_height%22%3A500%2C%22isLargeCatalog%22%3Afalse%2C%22limitTags%22%3Afalse%2C%22hasTags%22%3Afalse%2C%22productCategories%22%3A%5B%7B%22term_id%22%3A15%2C%22name%22%3A%22Uncategorized%22%2C%22slug%22%3A%22uncategorized%22%2C%22term_group%22%3A0%2C%22term_taxonomy_id%22%3A15%2C%22taxonomy%22%3A%22product_cat%22%2C%22description%22%3A%22%22%2C%22parent%22%3A0%2C%22count%22%3A0%2C%22filter%22%3A%22raw%22%2C%22link%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fzlash%5C%2Fproduct-category%5C%2Funcategorized%5C%2F%22%7D%5D%2C%22homeUrl%22%3A%22http%3A%5C%2F%5C%2Flocalhost%5C%2Fzlash%5C%2F%22%7D' ) );
+		</script>
+		<script type='text/javascript' src='https://zlash.tk/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/zlash\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/zlash\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/zlash.tk","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://zlash.tk/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=3.7.0'></script>
+<script type='text/javascript' src='https://zlash.tk/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/zlash\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/zlash\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://zlash.tk/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=3.7.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/zlash\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/zlash\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_6e6dfd754f1aba103e976b7d932b051b","fragment_name":"wc_fragments_6e6dfd754f1aba103e976b7d932b051b","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://zlash.tk/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=3.7.0'></script>
+<script type='text/javascript'>
+		jQuery( 'body' ).bind( 'wc_fragments_refreshed', function() {
+			jQuery( 'body' ).trigger( 'jetpack-lazy-images-load' );
+		} );
+	
+</script>
 <script type='text/javascript' src='https://zlash.tk/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='https://zlash.tk/wp-content/themes/oceanwp/assets/js/third/woo/woo-scripts.min.js?ver=1.7.1'></script>
 <script type='text/javascript' src='https://zlash.tk/wp-content/themes/oceanwp/assets/js/third/magnific-popup.min.js?ver=1.7.1'></script>
 <script type='text/javascript' src='https://zlash.tk/wp-content/themes/oceanwp/assets/js/third/lightbox.min.js?ver=1.7.1'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var oceanwpLocalize = {"isRTL":"","menuSearchStyle":"drop_down","sidrSource":"#sidr-close, #site-navigation, #mobile-menu-search","sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"icon","verticalHeaderTarget":"icon","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select","ajax_url":"https:\/\/zlash.tk\/wp-admin\/admin-ajax.php"};
+var oceanwpLocalize = {"isRTL":"","menuSearchStyle":"drop_down","sidrSource":"#sidr-close, #site-navigation, #mobile-menu-search","sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"icon","verticalHeaderTarget":"icon","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select","wooCartStyle":"drop_down","ajax_url":"https:\/\/zlash.tk\/wp-admin\/admin-ajax.php","cart_url":"https:\/\/zlash.tk","cart_redirect_after_add":"no","view_cart":"View cart","floating_bar":"on","grouped_text":"View products"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://zlash.tk/wp-content/themes/oceanwp/assets/js/main.min.js?ver=1.7.1'></script>
+<script type='text/javascript' src='https://zlash.tk/wp-content/themes/oceanwp/assets/js/third/woo/woo-quick-view.min.js?ver=1.7.1'></script>
+<script type='text/javascript' src='https://zlash.tk/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/zlash\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://zlash.tk/wp-includes/js/wp-util.min.js?ver=5.2.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_variation_params = {"wc_ajax_url":"\/zlash\/?wc-ajax=%%endpoint%%","i18n_no_matching_variations_text":"Sorry, no products matched your selection. Please choose a different combination.","i18n_make_a_selection_text":"Please select some product options before adding this product to your cart.","i18n_unavailable_text":"Sorry, this product is unavailable. Please choose a different combination."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://zlash.tk/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=3.7.0'></script>
+<script type='text/javascript' src='https://zlash.tk/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2'></script>
+<script type='text/javascript' src='https://zlash.tk/wp-content/themes/oceanwp/assets/js/third/woo/woo-mini-cart.min.js?ver=1.7.1'></script>
 <script type='text/javascript' src='https://zlash.tk/wp-includes/js/wp-embed.min.js?ver=5.2.3'></script>
 <!--[if lt IE 9]>
 <script type='text/javascript' src='https://zlash.tk/wp-content/themes/oceanwp/assets/js//third/html5.min.js?ver=1.7.1'></script>
