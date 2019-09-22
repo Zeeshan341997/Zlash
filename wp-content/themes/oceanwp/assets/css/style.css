@@ -248,45 +248,53 @@ body .oceanwp-row .span_1_of_10 {
 /**
  * Search form shortcode
  */
-form.oceanwp-searchform {
-  display: inline-block;
-  position: relative;
-  height: 35px;
+.search-box {
+	position: absolute;
+	top: 0%;
+	right: 5%;
+	transform: translate(1%,15%);
+	padding: 1px;	
+	background: white;
+	height: 40px;
+	border-radius: 40px;
 }
 
-form.oceanwp-searchform input {
-  margin: 0;
-  padding: 0 40px 0 15px;
-  height: 100%;
-  min-height: 100%;
+.search-box:hover input{
+	width: 200px;
+	padding: 0 8px;
 }
 
-form.oceanwp-searchform button {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  min-width: 40px;
-  height: 60%;
-  height: 100%;
-  font-size: 12px;
-  font-weight: 600;
-  background-color: transparent !important;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  text-align: center;
-  line-height: 1;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
+.search-box :hover button{
+	background: black;
+	color: white;
+}
+
+.search-btn {
+	color: black;
+	float: right;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border-width: 5px;
+	border-color: black;
+	display: flex;
+	background: white;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s;
+}
+
+.search-text {
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: black;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 0px;
 }
 
 /**
@@ -2345,7 +2353,8 @@ a.pure-button-selected {
 }
 
 #top-bar-social li a.oceanwp-facebook a:hover {
-  color: #37589b;
+  color: white;
+  background-color: blue;
 }
 
 #top-bar-social li a.oceanwp-googleplus a:hover {
@@ -2365,7 +2374,8 @@ a.pure-button-selected {
 }
 
 #top-bar-social li a.oceanwp-instagram a:hover {
-  color: #3F729B;
+  color: white;
+  background: purple;
 }
 
 #top-bar-social li a.oceanwp-linkedin a:hover {
@@ -2767,15 +2777,15 @@ a.pure-button-selected {
 }
 
 #site-header.top-header #search-toggle {
-  border-right: 1px solid #f1f1f1;
-  border-left: 1px solid #f1f1f1;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
   padding: 0 6px;
 }
 
 #site-header.top-header #search-toggle a {
-  display: inline-block;
+  display: flex;
   font-size: 12px;
-  width: 28px;
+  width: 40px;
   text-align: center;
 }
 
@@ -3118,7 +3128,7 @@ a.pure-button-selected {
 }
 
 #site-header.full_screen-header .fs-dropdown-menu > li.search-toggle-li form {
-  position: relative;
+  position: top-bar;
 }
 
 #site-header.full_screen-header .fs-dropdown-menu > li.search-toggle-li input, #site-header.full_screen-header .fs-dropdown-menu > li.search-toggle-li label {
@@ -3131,7 +3141,7 @@ a.pure-button-selected {
 }
 
 #site-header.full_screen-header .fs-dropdown-menu > li.search-toggle-li input {
-  position: relative;
+  position: top-bar;
   border: 0;
   background-color: transparent;
   border-bottom: 1px solid #666;
@@ -3148,7 +3158,7 @@ a.pure-button-selected {
 
 #site-header.full_screen-header .fs-dropdown-menu > li.search-toggle-li label {
   display: block;
-  position: absolute;
+  position: top-bar;
   top: 0;
   bottom: 0;
   left: 0;
