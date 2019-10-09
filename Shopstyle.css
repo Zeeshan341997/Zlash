@@ -147,8 +147,8 @@ p {
 
 .look {
   position: absolute;
-  color: $white;
-  opacity: .4;
+  color: black;
+  opacity: .8;
   right: 5px;
   top: 185px;
   font-size: 2.3em;
