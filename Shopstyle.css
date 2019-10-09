@@ -34,7 +34,7 @@ nav {
   margin: 1em;
   margin-top: 2.4em;
   font-family: regular;
-  font-size: 11px;
+  font-size: 15px;
 }
 
 .navbar a {
@@ -43,7 +43,7 @@ nav {
   border-radius: 25px;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   color: black;
 }
 
