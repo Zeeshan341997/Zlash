@@ -196,7 +196,7 @@ body {
 }
 
 .banner {
-	padding: auto;
+	padding: 0 5px;
 	position: relative;
 	box-shadow: 4px 10px 20px rgb(128,128,128);
     	height: auto; 
