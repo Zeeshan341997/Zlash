@@ -204,7 +204,7 @@ body {
 	margin: 15% auto;
 }
 
-footer {
+.footer {
 	position: absolute;
     bottom: -100%;
     width: 100%;
@@ -213,7 +213,7 @@ footer {
     text-align: center;
 }
 
-footer h6:hover {
+.footer h6:hover {
 	background-color: black;
 	color: #ffc101;
 }
