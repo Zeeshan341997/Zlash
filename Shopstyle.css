@@ -200,12 +200,14 @@ p {
 }
 
 .footer {
-	position: absolute;
+    position: absolute;
     bottom: -100%;
     width: 100%;
     background-color: black;
     color: white;
     text-align: center;
+    font-size: 28px;
+
 }
 
 .footer h6:hover {
