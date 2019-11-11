@@ -115,7 +115,7 @@ a {
 	height: 40px;
 	border-radius: 50%;
 	border-width: 5px;
-	border-color: #ffc101;
+	border-color: #00D5FF;
 	display: flex;
 	background: white;
 	justify-content: center;
@@ -182,7 +182,7 @@ a {
 
 #Rightnavbar a#active {
 	  background-color: white;
-	  color: #ffc101;
+	  color: #00D5FF;
 }
 
 #Product {
