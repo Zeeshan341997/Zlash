@@ -204,16 +204,4 @@ body {
 	margin: 15% auto;
 }
 
-.footer {
-	position: absolute;
-    bottom: -100%;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
 
-.footer h6:hover {
-	background-color: black;
-	color: #ffc101;
-}
