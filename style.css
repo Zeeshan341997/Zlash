@@ -191,7 +191,6 @@ body {
 	background-color: white;
 	margin: 0;
 	padding: 0;
-	font-size: 28px;
 	
 }
 
@@ -216,8 +215,8 @@ body {
 
 
 h1 {
-  font-family: $big;
-  color: $coral;
+  font-family: big;
+  color: black;
   text-transform: uppercase;
   font-size: 3.5em;
   text-shadow: 2px 1px 0px rgba(gray, .9);
@@ -231,8 +230,8 @@ h2 {
   text-transform: uppercase;
   margin-top: -20px;
   letter-spacing: 3px;
-  font-family: $regular;
-  color: $onyx;
+  font-family: regular;
+  color: black;
 }
 
 
